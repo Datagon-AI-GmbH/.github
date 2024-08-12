@@ -4,12 +4,10 @@ about: This should give you a standardized way of creating tasks. Fill out the a
   fields and remove the rest. Please be thorough when not tackling the tasks right
   away.
 title: ''
-labels: ''
+labels: 'enhancement'
 assignees: ''
 
 ---
-
-## Issue/Task Template
 
 ### Summary
 **Title**: Provide a concise and descriptive title for the issue or task.
@@ -31,9 +29,6 @@ assignees: ''
 
 ### Files to Touch
 **Affected Files**: List the files or modules likely to be modified.
-
-### Security and Compliance
-**Security**: Note any security-related considerations or implications.
 
 ### Testing
 **Tests**: Describe the testing strategy and key test cases.
