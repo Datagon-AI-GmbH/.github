@@ -5,7 +5,7 @@ about: This should give you a standardized way of creating tasks. Fill out the a
   away.
 title: ''
 labels: 'enhancement'
-assignees: ''
+assignees: 'HajekTim'
 
 ---
 
