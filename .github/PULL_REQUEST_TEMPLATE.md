@@ -1,7 +1,10 @@
 ## Description
 Please provide a brief description of the changes and their purpose here.
 
-## Checklist
+## How to test
+Description for the reviewer of how to test the changes
+
+## Checklist for PR
 - [ ] I have manually tested the changes
 - [ ] Integration tests have been added
 - [ ] Security-considerations have been made
@@ -9,22 +12,14 @@ Please provide a brief description of the changes and their purpose here.
 - [ ] Relevant stakeholders have been notified (if applicable)
 
 ### Security-Related Questions
-- [ ] Was a new package added?
-  - If yes, please specify the package and its purpose.
-- [ ] Was a new route added?
-  - If yes, please describe the route and its security implications.
-- [ ] Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
-  - If yes, please describe the changes.
+- Was a new package added?
 
-### Testing
-- [ ] Were integration tests created for new features?
-- [ ] Were unit tests created for new features?
+- Was a new route added?
+
+- Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
 
 ## Impact
-- [ ] Does this PR introduce breaking changes?
-  - If yes, please describe the impact and migration path.
-- [ ] What is the impact on existing users?
-  - If any, please describe.
+- Does this PR introduce breaking changes?
 
 ## Issue
 Please indicate the issue that is closed by this PR.
