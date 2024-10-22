@@ -55,6 +55,27 @@ body:
       placeholder: "e.g., API dependency may cause delays."
 
   - type: textarea
+    id: implementation_plan
+    attributes:
+      label: "Implementation Plan (Optional)"
+      description: "Outline the key steps required to complete this task."
+      placeholder: "e.g., 1. Set up authentication API 2. Develop login UI 3. Integrate backend services."
+
+  - type: textarea
+    id: files_to_touch
+    attributes:
+      label: "Files to Touch (Optional)"
+      description: "List the files or modules likely to be modified."
+      placeholder: "e.g., auth.js, login.html"
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: "Testing (Optional)"
+      description: "Describe the testing strategy and key test cases."
+      placeholder: "e.g., Unit tests for login component, integration tests for authentication flow."
+
+  - type: textarea
     id: documentation
     attributes:
       label: "Documentation"
@@ -78,3 +99,15 @@ body:
       label: "Additional Notes (Optional)"
       description: "Add any additional information that might be useful."
       placeholder: "e.g., Related tasks or dependencies."
+
+  - type: checkboxes
+    id: progress_checklist
+    attributes:
+      label: "Task Progress Checklist"
+      description: "Track the progress of the task by completing each item."
+      options:
+        - label: "Feature Implemented"
+        - label: "Manually Tested"
+        - label: "Tests Added/Updated"
+        - label: "Documentation Added/Updated"
+        - label: "PR Created"
