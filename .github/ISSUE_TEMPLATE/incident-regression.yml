@@ -1,0 +1,115 @@
+name: "Incident Management & Regression Testing"
+about: "Log incidents that reached production and track fixes along with regression test creation."
+title: "[Incident]: "
+labels: ["bug", "incident", "regression-test"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Incident Summary
+        Please fill out the information below to document the incident.
+
+  - type: input
+    id: incident_title
+    attributes:
+      label: Incident Title
+      description: "Provide a brief and descriptive title for the incident."
+      placeholder: "e.g., User profile image not loading on mobile"
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: "When was the incident reported? (MM/DD/YYYY)"
+      placeholder: "MM/DD/YYYY"
+
+  - type: input
+    id: reported_by
+    attributes:
+      label: Reported By
+      description: "Who reported this incident?"
+      placeholder: "Your name or team name"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Provide a short description of the issue and its impact."
+      placeholder: "Describe the issue and its impact."
+
+  - type: textarea
+    id: affected_area
+    attributes:
+      label: Affected Area
+      description: "Specify the module or feature impacted."
+      placeholder: "e.g., User Profile Module"
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "Provide the steps needed to reproduce the issue."
+      placeholder: |
+        1. Step 1
+        2. Step 2
+        3. Step 3
+      validations:
+        required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: "Select the severity level of the incident."
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Subtasks
+        Please update the details for each subtask.
+
+  - type: textarea
+    id: fix_details
+    attributes:
+      label: Fix the Incident
+      description: "Add details for fixing the issue, such as assignee, status, and PR link."
+      placeholder: |
+        - Assigned To: [Developer Name]
+        - Status: [In Progress/Complete]
+        - PR Link: [PR URL]
+
+  - type: textarea
+    id: regression_test_details
+    attributes:
+      label: Create Regression Test
+      description: "Provide details about the regression test, such as type, assignee, and status."
+      placeholder: |
+        - Test Type: [Frontend (e2e) / Backend]
+        - Assigned To: [Tester/Developer Name]
+        - Description: [Brief outline of the test case]
+        - Expected Outcome: [What the test should verify]
+        - Status: [In Progress/Complete]
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional Notes
+      description: "Add any additional relevant information or context."
+      placeholder: "Any other relevant information or context."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "Incident logged and tagged appropriately"
+        - label: "Fix completed and merged"
+        - label: "Regression test created and reviewed"
+        - label: "Test automated and integrated"
+        - label: "Issue resolved and closed"
