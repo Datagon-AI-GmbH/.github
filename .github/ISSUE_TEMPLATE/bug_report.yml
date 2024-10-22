@@ -17,7 +17,7 @@ body:
       label: "Describe the bug"
       description: "Provide a clear and concise description of what the bug is."
       placeholder: "A clear and concise description of what the bug is."
-      validations:
+    validations:
         required: true
 
   - type: textarea
@@ -30,7 +30,7 @@ body:
         2. Click on '...'
         3. Scroll down to '...'
         4. See error
-      validations:
+    validations:
         required: true
 
   - type: textarea
@@ -39,7 +39,7 @@ body:
       label: "Expected behavior"
       description: "A clear and concise description of what you expected to happen."
       placeholder: "What was the expected outcome?"
-      validations:
+    validations:
         required: true
 
   - type: input
