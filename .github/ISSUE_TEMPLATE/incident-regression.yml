@@ -1,5 +1,5 @@
 name: "Incident Management & Regression Testing"
-about: "Log incidents that reached production and track fixes along with regression test creation."
+description: "Log incidents that reached production and track fixes along with regression test creation."
 title: "[Incident]: "
 labels: ["bug", "incident", "regression-test"]
 
@@ -54,8 +54,6 @@ body:
         1. Step 1
         2. Step 2
         3. Step 3
-      validations:
-        required: true
 
   - type: dropdown
     id: severity
