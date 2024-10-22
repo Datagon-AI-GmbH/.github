@@ -13,58 +13,72 @@ body:
   - type: input
     id: incident_title
     attributes:
-      label: Incident Title
+      label: "Incident Title"
       description: "Provide a brief and descriptive title for the incident."
       placeholder: "e.g., User profile image not loading on mobile"
+    validations:
+      required: true
 
   - type: input
     id: date
     attributes:
-      label: Date
+      label: "Date"
       description: "When was the incident reported? (MM/DD/YYYY)"
       placeholder: "MM/DD/YYYY"
+    validations:
+      required: true
 
   - type: input
     id: reported_by
     attributes:
-      label: Reported By
+      label: "Reported By"
       description: "Who reported this incident?"
       placeholder: "Your name or team name"
+    validations:
+      required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Description
+      label: "Description"
       description: "Provide a short description of the issue and its impact."
       placeholder: "Describe the issue and its impact."
+    validations:
+      required: true
 
   - type: textarea
     id: affected_area
     attributes:
-      label: Affected Area
+      label: "Affected Area"
       description: "Specify the module or feature impacted."
       placeholder: "e.g., User Profile Module"
+    validations:
+      required: true
 
   - type: textarea
     id: steps_to_reproduce
     attributes:
-      label: Steps to Reproduce
+      label: "Steps to Reproduce"
       description: "Provide the steps needed to reproduce the issue."
       placeholder: |
         1. Step 1
         2. Step 2
         3. Step 3
+    validations:
+      required: true
 
   - type: dropdown
     id: severity
     attributes:
-      label: Severity
+      label: "Severity"
       description: "Select the severity level of the incident."
       options:
         - Critical
         - High
         - Medium
         - Low
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -75,7 +89,7 @@ body:
   - type: textarea
     id: fix_details
     attributes:
-      label: Fix the Incident
+      label: "Fix the Incident"
       description: "Add details for fixing the issue, such as assignee, status, and PR link."
       placeholder: |
         - Assigned To: [Developer Name]
@@ -85,7 +99,7 @@ body:
   - type: textarea
     id: regression_test_details
     attributes:
-      label: Create Regression Test
+      label: "Create Regression Test"
       description: "Provide details about the regression test, such as type, assignee, and status."
       placeholder: |
         - Test Type: [Frontend (e2e) / Backend]
@@ -97,14 +111,14 @@ body:
   - type: textarea
     id: additional_notes
     attributes:
-      label: Additional Notes
+      label: "Additional Notes (Optional)"
       description: "Add any additional relevant information or context."
       placeholder: "Any other relevant information or context."
 
   - type: checkboxes
     id: checklist
     attributes:
-      label: Checklist
+      label: "Checklist"
       options:
         - label: "Incident logged and tagged appropriately"
         - label: "Fix completed and merged"
