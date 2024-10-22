@@ -1,7 +1,7 @@
 name: "Incident Management & Regression Testing"
 description: "Log incidents that reached production and track fixes along with regression test creation."
 title: "[Incident]: "
-labels: ["bug", "incident", "regression-test"]
+labels: ["bug", "incident", "test"]
 
 body:
   - type: markdown
