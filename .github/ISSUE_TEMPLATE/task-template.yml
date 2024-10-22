@@ -1,0 +1,80 @@
+name: "Task Template"
+description: "Standardized template for creating tasks. Fill out applicable fields thoroughly."
+title: "[Task]: "
+labels: ["enhancement"]
+assignees: ["HajekTim"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task Template
+        Please fill out the required information below to create a standardized task.
+
+  - type: input
+    id: task_title
+    attributes:
+      label: "Title"
+      description: "Provide a concise and descriptive title for the task."
+      placeholder: "e.g., Implement user authentication feature"
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: "Description"
+      description: "Briefly describe the task, including relevant background information and context."
+      placeholder: "Description of the task and its background."
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_goal
+    attributes:
+      label: "Goal"
+      description: "State the desired outcome of this task."
+      placeholder: "e.g., Users can log in with their email and password."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define clear, measurable, and testable criteria for completion."
+      placeholder: "e.g., User is redirected to the dashboard upon successful login."
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential_issues
+    attributes:
+      label: "Potential Issues (Optional)"
+      description: "List any potential challenges, dependencies, or risks."
+      placeholder: "e.g., API dependency may cause delays."
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: "Documentation"
+      description: "Specify any documentation that needs updating."
+      placeholder: "e.g., Update user guide with new login instructions."
+    validations:
+      required: true
+
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: "Stakeholders"
+      description: "List stakeholders to be informed or consulted."
+      placeholder: "e.g., Product Owner, QA Team"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "Additional Notes (Optional)"
+      description: "Add any additional information that might be useful."
+      placeholder: "e.g., Related tasks or dependencies."
