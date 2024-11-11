@@ -21,20 +21,11 @@ body:
       required: true
 
   - type: textarea
-    id: task_description
+    id: user_story
     attributes:
-      label: "Description"
-      description: "Briefly describe the task, including relevant background information and context."
-      placeholder: "Description of the task and its background."
-    validations:
-      required: true
-
-  - type: textarea
-    id: task_goal
-    attributes:
-      label: "Goal"
-      description: "State the desired outcome of this task."
-      placeholder: "e.g., Users can log in with their email and password."
+      label: "User Story"
+      description: "Describe the feature from the user's perspective, including who it’s for, what they need, andwhy it matters."
+      placeholder: "As a [user role], I want to [feature], so that I can [benefit or reason]."
     validations:
       required: true
 
@@ -60,13 +51,6 @@ body:
       label: "Implementation Plan (Optional)"
       description: "Outline the key steps required to complete this task."
       placeholder: "e.g., 1. Set up authentication API 2. Develop login UI 3. Integrate backend services."
-
-  - type: textarea
-    id: files_to_touch
-    attributes:
-      label: "Files to Touch (Optional)"
-      description: "List the files or modules likely to be modified."
-      placeholder: "e.g., auth.js, login.html"
 
   - type: textarea
     id: testing
