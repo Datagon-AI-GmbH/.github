@@ -4,6 +4,12 @@ Please provide a brief description of the changes and their purpose here.
 ## How to test
 Description for the reviewer of how to test the changes
 
+## Customer Impact
+Please indicate the level of customer impact for this change:
+- [ ] Low: Minimal impact, no noticeable change to customers.
+- [ ] Medium: Some impact, might have visual impact or impact on request quality.
+- [ ] High: Significant impact, might render the software unusable
+
 ## Checklist for PR
 - [ ] I have manually tested the changes
 - [ ] Integration tests have been added
@@ -17,9 +23,6 @@ Description for the reviewer of how to test the changes
 - Was a new route added?
 
 - Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
-
-## Impact
-- Does this PR introduce breaking changes?
 
 ## Issue
 Please indicate the issue that is closed by this PR.
