@@ -24,11 +24,6 @@ Please indicate the level of customer impact for this change:
 
 - Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
 
-## Issue
-Please indicate the issue that is closed by this PR.
-
-Fixes #<issue_number>
-
 ## Screenshots (if applicable)
 Please attach any relevant screenshots to illustrate the changes.
 
