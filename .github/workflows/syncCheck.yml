@@ -1,0 +1,107 @@
+# This workflow checks if a PR branch is up to date with the main branch
+# It prevents merging if the PR branch is behind main to avoid potential conflicts
+
+name: Sync Check
+
+on:
+  # Triggers on pull request events (open, sync, etc.)
+  pull_request:
+  # Allows manual triggering of the workflow
+  workflow_dispatch:
+
+jobs:
+  check-sync:
+    runs-on: arc-runner-set
+    # Required permissions for the GitHub token
+    permissions:
+        contents: read      # Needed for git operations
+        checks: write       # Needed to create check runs
+        statuses: write     # Needed to create commit statuses
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Optimize checkout by not fetching files, only git metadata
+          filter: 'tree:0'
+          # Need full history to check branch ancestry
+          fetch-depth: 0
+          # Use default GitHub token for authentication
+          persist-credentials: true
+
+      - name: Get PR commit SHA (for manual runs)
+        id: get-sha
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // For PR events, get the head commit SHA directly from the event payload
+            let sha = context.payload.pull_request ? context.payload.pull_request.head.sha : null;
+
+            // For manual workflow runs, we need to fetch the SHA of the current branch
+            if (!sha && context.eventName === 'workflow_dispatch') {
+              const { data: ref } = await github.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: 'heads/${{ github.ref_name }}'
+              });
+              sha = ref.object.sha;
+            }
+            console.log('Using commit SHA:', sha);
+            core.setOutput('sha', sha);
+
+      - name: Check if the branch is based on the newest commit in main
+        id: check-sync
+        run: |
+          # Fetch the latest state of main branch
+          git fetch origin main
+
+          # Find the common ancestor (merge base) between current branch and main
+          MERGE_BASE=$(git merge-base HEAD origin/main)
+          echo "Merge base commit: $MERGE_BASE"
+
+          # Check if main is an ancestor of the merge base
+          # If true: branch is up to date (success)
+          # If false: branch needs updating (failure)
+          if git merge-base --is-ancestor origin/main $MERGE_BASE; then
+            echo "STATUS=success" >> $GITHUB_ENV
+          else
+            echo "STATUS=failure" >> $GITHUB_ENV
+            exit 1
+          fi
+
+      - name: Report Sync Check Status
+        uses: actions/github-script@v3
+        # Always run this step, even if previous steps failed
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Create a check run using GitHub Checks API
+            // This creates a detailed check result in the PR's checks tab
+            if (!(context.eventName === 'workflow_dispatch')) {
+                return; // No need to create a new check, if not manually triggered.
+            }
+            await github.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'check-sync',
+              head_sha: '${{ steps.get-sha.outputs.sha }}',
+              status: 'completed',
+              conclusion: process.env.STATUS,
+              output: {
+                title: 'check-sync',
+                summary: process.env.STATUS === 'success' ? 'Branch is up to date with main.' : 'Branch needs updating!'
+              }
+            });
+
+            // Also create a commit status using GitHub Status API
+            // This ensures compatibility with branch protection rules
+            await github.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ steps.get-sha.outputs.sha }}',
+              state: process.env.STATUS,
+              description: process.env.STATUS === 'success' ? 'Branch is up to date with main' : 'Branch needs updating',
+              context: 'check-sync'
+            });
