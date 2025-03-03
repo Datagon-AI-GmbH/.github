@@ -66,7 +66,10 @@ jobs:
           if git merge-base --is-ancestor origin/main $MERGE_BASE; then
             echo "STATUS=success" >> $GITHUB_ENV
           else
-            echo "STATUS=failure" >> $GITHUB_ENV
+            echo "EXPECTED_SHA=$(git rev-parse origin/main)" >> $GITHUB_ENV
+            echo "ACTUAL_SHA=$MERGE_BASE" >> $GITHUB_ENV
+            echo "Expected SHA: ${{ env.EXPECTED_SHA }}"
+            echo "Actual SHA: ${{ env.ACTUAL_SHA }}"
             exit 1
           fi
 
