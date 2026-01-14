@@ -10,6 +10,7 @@ Please provide a brief description of the changes and their purpose here.
 - [ ] **SKIP** - Skip versioning and release creation for this PR
 
 NOTE: the selected options are used to automatically perform semantic versioning of the updated services.
+
 ---
 
 ## How to test
