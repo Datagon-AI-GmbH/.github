@@ -1,6 +1,16 @@
 ## Description
 Please provide a brief description of the changes and their purpose here.
 
+### ⚠️ **RELEASE VERSIONING - REQUIRED** ⚠️  
+**Please select ONE of the following options. This determines how the version will be incremented when this PR is merged:**
+
+- <input type="radio" name="release_versioning" /> **FIX** - Patch version increment (e.g., 1.2.3.4 → 1.2.3.5)
+- <input type="radio" name="release_versioning" /> **FEATURE** - Minor version increment (e.g., 1.2.3.4 → 1.2.4.0)
+- <input type="radio" name="release_versioning" /> **MAJOR** - Major version increment (e.g., 1.2.3.4 → 1.3.0.0). All services will be retagged with the new major version.
+- <input type="radio" name="release_versioning" /> **SKIP** - Skip versioning and release creation for this PR
+
+---
+
 ## How to test
 Description for the reviewer of how to test the changes
 
