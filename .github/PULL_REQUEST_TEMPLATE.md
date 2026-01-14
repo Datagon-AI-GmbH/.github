@@ -9,7 +9,10 @@ Please provide a brief description of the changes and their purpose here.
 - [ ] **MAJOR** - Major version increment (e.g., 1.2.3.4 → 1.3.0.0). All services will be retagged with the new major version.
 - [ ] **SKIP** - Skip versioning and release creation for this PR
 
-NOTE: the selected options are used to automatically perform semantic versioning of the updated services.
+NOTE 1: the selected options are used to automatically perform semantic versioning of the updated services.
+
+NOTE 2: If any of this is remotely unclear/ambiguous to you, look into it [here](https://datagon.sharepoint.com/:fl:/g/contentstorage/CSP_701ac80f-8bc4-47de-9a47-2fb31dcedbfe/IQAEgmeDBPmaQKKVLDiLTWG1AVRxHTHdO6cULm3HglDsipE?e=IWSthA&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83MDFhYzgwZi04YmM0LTQ3ZGUtOWE0Ny0yZmIzMWRjZWRiZmUmZD1iJTIxRDhnYWNNU0wza2VhUnktekhjN2JfaW5DTkpiZ2JfTktpcGJJOFZRMXRxSTlZelpmRnlwOVNMaHlqNkxrUUJMNCZmPTAxNUNJUDVQQUVRSlRZR0JIWlRKQUtGRkpNSENGVTJZTlYmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lcg%3D%3D).
+
 
 ---
 
