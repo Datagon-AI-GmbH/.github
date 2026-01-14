@@ -9,6 +9,7 @@ Please provide a brief description of the changes and their purpose here.
 - [ ] **MAJOR** - Major version increment (e.g., 1.2.3.4 → 1.3.0.0). All services will be retagged with the new major version.
 - [ ] **SKIP** - Skip versioning and release creation for this PR
 
+NOTE: the selected options are used to automatically perform semantic versioning of the updated services.
 ---
 
 ## How to test
