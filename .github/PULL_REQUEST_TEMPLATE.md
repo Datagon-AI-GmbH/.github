@@ -1,7 +1,3 @@
-## Description
-Please provide a brief description of the changes and their purpose here.
-
-### ⚠️ **RELEASE VERSIONING - REQUIRED** ⚠️
 **Please select ONE of the following options (mark with an `x`):**
 
 - [ ] **FIX** - Patch version increment (e.g., 1.2.3.4 → 1.2.3.5)
@@ -9,38 +5,21 @@ Please provide a brief description of the changes and their purpose here.
 - [ ] **MAJOR** - Major version increment (e.g., 1.2.3.4 → 1.3.0.0). All services will be retagged with the new major version.
 - [ ] **SKIP** - Skip versioning and release creation for this PR
 
-NOTE 1: the selected options are used to automatically perform semantic versioning of the updated services.
-
-NOTE 2: If any of this is remotely unclear/ambiguous to you, look into it [here](https://datagon.sharepoint.com/:fl:/g/contentstorage/CSP_701ac80f-8bc4-47de-9a47-2fb31dcedbfe/IQAEgmeDBPmaQKKVLDiLTWG1AVRxHTHdO6cULm3HglDsipE?e=IWSthA&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83MDFhYzgwZi04YmM0LTQ3ZGUtOWE0Ny0yZmIzMWRjZWRiZmUmZD1iJTIxRDhnYWNNU0wza2VhUnktekhjN2JfaW5DTkpiZ2JfTktpcGJJOFZRMXRxSTlZelpmRnlwOVNMaHlqNkxrUUJMNCZmPTAxNUNJUDVQQUVRSlRZR0JIWlRKQUtGRkpNSENGVTJZTlYmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lcg%3D%3D).
+NOTE: If any of this is remotely unclear/ambiguous to you, look into it [here](https://datagon.sharepoint.com/:fl:/g/contentstorage/CSP_701ac80f-8bc4-47de-9a47-2fb31dcedbfe/IQAEgmeDBPmaQKKVLDiLTWG1AVRxHTHdO6cULm3HglDsipE?e=IWSthA&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83MDFhYzgwZi04YmM0LTQ3ZGUtOWE0Ny0yZmIzMWRjZWRiZmUmZD1iJTIxRDhnYWNNU0wza2VhUnktekhjN2JfaW5DTkpiZ2JfTktpcGJJOFZRMXRxSTlZelpmRnlwOVNMaHlqNkxrUUJMNCZmPTAxNUNJUDVQQUVRSlRZR0JIWlRKQUtGRkpNSENGVTJZTlYmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lcg%3D%3D). The selected options are used to automatically perform semantic versioning of the updated services.
 
 
 ---
+## Summary
+Please provide a one to two sentence summary of what is addressed by this PR.
 
 ## How to test
 Description for the reviewer of how to test the changes
 
-## Customer Impact
-Please indicate the level of customer impact for this change:
-- [ ] Low: Minimal impact, no noticeable change to customers.
-- [ ] Medium: Some impact, might have visual impact or impact on request quality.
-- [ ] High: Significant impact, might render the software unusable
+## Description
+Please provide a brief conceptual description of the main changes and their purpose (ideally as bullet points).
 
-## Checklist for PR
-- [ ] I have manually tested the changes
-- [ ] Integration tests have been added
-- [ ] Security-considerations have been made
-- [ ] Documentation has been updated (if applicable)
-- [ ] Relevant stakeholders have been notified (if applicable)
-
-### Security-Related Questions
+## Security-Related Questions
 - Was a new package added?
-
-- Was a new route added?
 
 - Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
 
-## Screenshots (if applicable)
-Please attach any relevant screenshots to illustrate the changes.
-
-## Additional Notes
-Please add any additional information that might be useful for reviewers.
