@@ -1,12 +1,9 @@
 **Please select ONE of the following options (mark with an `x`):**
 
-- [ ] **FIX** - Patch version increment (e.g., 1.2.3.4 → 1.2.3.5)
-- [ ] **FEATURE** - Minor version increment (e.g., 1.2.3.4 → 1.2.4.0)
-- [ ] **MAJOR** - Major version increment (e.g., 1.2.3.4 → 1.3.0.0). All services will be retagged with the new major version.
-- [ ] **SKIP** - Skip versioning and release creation for this PR
-
-NOTE: If any of this is remotely unclear/ambiguous to you, look into it [here](https://datagon.sharepoint.com/:fl:/g/contentstorage/CSP_701ac80f-8bc4-47de-9a47-2fb31dcedbfe/IQAEgmeDBPmaQKKVLDiLTWG1AVRxHTHdO6cULm3HglDsipE?e=IWSthA&nav=cz0lMkZjb250ZW50c3RvcmFnZSUyRkNTUF83MDFhYzgwZi04YmM0LTQ3ZGUtOWE0Ny0yZmIzMWRjZWRiZmUmZD1iJTIxRDhnYWNNU0wza2VhUnktekhjN2JfaW5DTkpiZ2JfTktpcGJJOFZRMXRxSTlZelpmRnlwOVNMaHlqNkxrUUJMNCZmPTAxNUNJUDVQQUVRSlRZR0JIWlRKQUtGRkpNSENGVTJZTlYmYz0lMkYmYT1Mb29wQXBwJnA9JTQwZmx1aWR4JTJGbG9vcC1wYWdlLWNvbnRhaW5lcg%3D%3D). The selected options are used to automatically perform semantic versioning of the updated services.
-
+- [ ] **FIX** - Patch version increment (e.g., 2.3.4 → 2.3.5)
+- [ ] **FEATURE** - Minor version increment (e.g., 2.3.4 → 2.4.0)
+- [ ] **MAJOR** - Major version increment (e.g., 2.3.4 → 3.0.0).
+- [ ] **SKIP** - Skip versioning for this PR
 
 ---
 ## Summary
