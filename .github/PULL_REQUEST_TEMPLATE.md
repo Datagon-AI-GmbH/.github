@@ -1,11 +1,3 @@
-**Please select ONE of the following options (mark with an `x`):**
-
-- [ ] **FIX** - Patch version increment (e.g., 2.3.4 → 2.3.5)
-- [ ] **FEATURE** - Minor version increment (e.g., 2.3.4 → 2.4.0)
-- [ ] **MAJOR** - Major version increment (e.g., 2.3.4 → 3.0.0).
-- [ ] **SKIP** - Skip versioning for this PR
-
----
 ## Summary
 Please provide a one to two sentence summary of what is addressed by this PR.
 
