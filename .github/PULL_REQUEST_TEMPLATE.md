@@ -12,3 +12,6 @@ Please provide a brief conceptual description of the main changes and their purp
 
 - Were any other security-relevant parts of the software changed (e.g., new port, authentication)?
 
+## Security
+
+- [ ] This change follows our [secure development guidelines](https://app.notion.com/p/manex-ai/Richtlinie-zur-Entwicklungssicherheit-3df48a7d47e68089a76bdf96237572e8) and the [OWASP Top 10](https://owasp.org/Top10/) (security requirements considered, no secrets or customer data, dependencies reviewed, tests cover security-relevant behaviour)

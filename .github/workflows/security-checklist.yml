@@ -1,0 +1,19 @@
+name: Security checklist
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require all checklist boxes to be ticked
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: |
+          if printf '%s\n' "$BODY" | grep -Eq '^[[:space:]]*- \[ \]'; then
+            echo "::error::PR description has unticked security checklist items. Tick the box to unblock merge."
+            exit 1
+          fi
+          echo "Security checklist complete."
